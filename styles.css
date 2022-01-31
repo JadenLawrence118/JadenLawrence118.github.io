@@ -100,3 +100,19 @@ body {
     clear: both;
     display: table;
 }
+
+.footer {
+    background: #fdb338;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.copyright {
+    align-content: end;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    margin: 10px;
+}
