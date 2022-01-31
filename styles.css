@@ -6,7 +6,7 @@ div {
 
 body {
     margin: 0;
-    background-image: url("pics/backgroundTile.png");
+    background-image: url("pics/backgroundTileSmall.png");
     background-repeat: repeat;
     background-size: initial;
     font-size: 28px;
@@ -14,8 +14,8 @@ body {
 }
 
 .HTJLogo {
-    width: 350px;
-    height: 100px;
+    width: 245px;
+    height: 70px;
 }
 
 .header {
@@ -23,7 +23,17 @@ body {
     width: inherit;
     background-color: #FFFFFF;
     z-index: 1;
-    height: 100px;
+    height: 70px;
+}
+
+.topColumn {
+    float: left;
+    width: 25%;
+}
+
+.topRow::after {
+    clear: both;
+    display: table;
 }
 
 .topButton {
@@ -34,7 +44,7 @@ body {
     border-style: solid;
     border-width: thick;
     font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
+    font-size: 7px;
 }
 
     .topButton:hover {
@@ -51,7 +61,7 @@ body {
     border-style: solid;
     border-width: thick;
     font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
+    font-size: 8px;
 }
 
 .dropdown {
@@ -90,20 +100,9 @@ body {
     color: #fdb338;
 }
 
-.topColumn {
-    float: left;
-    width: 25%;
-}
-
-.topRow::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .footer {
     background: #fdb338;
-    height: 70px;
+    height: 50px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -112,7 +111,39 @@ body {
 .copyright {
     align-content: end;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 10px;
     color: #000000;
     margin: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        background-image: url("pics/backgroundTile.png");
+    }
+
+    .HTJLogo {
+        width: 350px;
+        height: 100px;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .topButton {
+        font-size: 30px;
+    }
+
+    .topDropBtn {
+        font-size: 30px;
+    }
+
+    .footer {
+        height: 70px;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
 }
