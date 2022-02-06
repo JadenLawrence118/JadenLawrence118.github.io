@@ -43,6 +43,7 @@ body {
     height: 50px;
     background: #fdb338;
     color: #000000;
+    margin-bottom: 10px;
     border-color: #000000;
     border-style: solid;
     border-width: thick;
@@ -120,6 +121,16 @@ body {
     font-size: 10px;
     color: #000000;
     margin: 10px;
+}
+
+.contactForm {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3vw;
+    background-color: #025196;
+}
+
+input {
+    width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
