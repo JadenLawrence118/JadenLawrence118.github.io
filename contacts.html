@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<html lang="en">
+
 <head>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -10,12 +12,12 @@
 
 <body>
     <div class="header">
-        <a class="image" href="https://jadenlawrence118.github.io"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a>
+        <a class="image" href="index.html"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a>
     </div>
 
     <div class="topRow">
         <div class="topColumn">
-            <button class="topButton" onclick="btnHomeClick()" style="width:100%; font-size:2.5vw">Home</button>
+            <button class="topButton" onclick="btnHomeClick()" style="width:100%">Home</button>
         </div>
 
         <div class="topColumn">
@@ -41,10 +43,12 @@
         <fieldset>
             <legend>Participant Entry Form</legend>
 
-            <div>
+            <div class="formDiv">
                 <label>Full Name:</label>
+                <input type="text" />
             </div>
-            <div>
+            <div class="formDiv">
+                <label>Email Address:</label>
                 <input type="text" />
             </div>
         </fieldset>
@@ -55,3 +59,4 @@
         <p class="copyright">All Rights Reserved</p>
     </div>
 </body>
+</html>

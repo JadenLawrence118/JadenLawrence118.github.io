@@ -129,8 +129,13 @@ body {
     background-color: #025196;
 }
 
+.formDiv {
+    margin-top: 30px;
+}
+
 input {
     width: 100%;
+    margin-top: 10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -163,5 +168,18 @@ input {
 
     .copyright {
         font-size: 16px;
+    }
+
+    .contactForm {
+        font-size: 2vw;
+    }
+
+    .formDiv {
+        justify-content: left
+    }
+
+    input {
+        float: right;
+        width: 50%;
     }
 }
