@@ -3,7 +3,7 @@ function btnHomeClick() {
 }
 
 function btnDownloadsClick() {
-    parent.location = "index.html";
+    parent.location = "downloads.html";
 }
 
 function btnContactClick() {
