@@ -11,58 +11,78 @@
 </head>
 
 <body>
-    <div class="header">
-        <a class="image" href="index.html"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a>
-    </div>
+    <div class="contactsGrid">
+        <header>
+            <a class="image" href="index.html"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a>
+        </header>
 
-    <div class="topRow">
-        <div class="topColumn">
-            <button class="topButton" onclick="btnHomeClick()" style="width:100%">Home</button>
-        </div>
+        <nav>
+            <div class="topColumn">
+                <button class="topButton" onclick="btnHomeClick()" style="width:100%">Home</button>
+            </div>
 
-        <div class="topColumn">
-            <button class="topButton" onclick="btnDownloadsClick()" style="width:100%">Downloads</button>
-        </div>
+            <div class="topColumn">
+                <button class="topButton" onclick="btnDownloadsClick()" style="width:100%">Downloads</button>
+            </div>
 
-        <div class="topColumn">
-            <div class="dropdown" style="width:100%">
-                <button class="topDropBtn">Charities</button>
-                <div class="dropdown-content">
-                    <a href="YoungMinds.html">YoungMinds</a>
-                    <a href="Mind.html">Mind</a>
+            <div class="topColumn">
+                <div class="dropdown" style="width:100%">
+                    <button class="topDropBtn">Charities</button>
+                    <div class="dropdown-content">
+                        <a href="YoungMinds.html">YoungMinds</a>
+                        <a href="Mind.html">Mind</a>
+                    </div>
                 </div>
             </div>
+
+            <div class="topColumn">
+                <button class="topButton" onclick="btnContactClick()" style="width:100%">Contact Us</button>
+            </div>
+        </nav>
+
+        <div class="left">
+            <label class="lblContacts">Host Contacts:</label>
+            <br>
+            <label class="lblEmail">contactus@hypetrainjam.net</label>
+
+            <div class="socialImgBlock">
+                <a href="https://www.facebook.com/"><img class="socialImage" src="pics/pixelFB.png" alt="Link to facebook"></a>
+                <a href="https://www.instagram.com/"><img class="socialImage" src="pics/pixelInsta.png" alt="Link to instagram"></a>
+            </div>
+
+            <div class="socialImgBlock">
+                <a href="https://twitter.com/"><img class="socialImage" src="pics/pixelTwit.png" alt="Link to twitter"></a>
+                <a href="https://uk.linkedin.com/"><img class="socialImage" src="pics/pixelLinkedIn.png" alt="Link to linked in"></a>
+            </div>
         </div>
 
-        <div class="topColumn">
-            <button class="topButton" onclick="btnContactClick()" style="width:100%">Contact Us</button>
-        </div>
-    </div>
+        <form class="contactForm">
+            <fieldset>
+                <legend>Participant Entry Form</legend>
 
-    <form class="contactForm">
-        <fieldset>
-            <legend>Participant Entry Form</legend>
+                <div class="formDiv">
+                    <label>Full Name:</label>
+                    <input type="text" placeholder="e.g. Joe Bloggs" />
+                </div>
 
-            <div class="formDiv">
-                <label>Full Name:</label>
-                <input type="text" placeholder="e.g. Joe Blogs" />
-            </div>
+                <div class="formDiv">
+                    <label>Email Address:</label>
+                    <input type="text" placeholder="e.g. joe.bloggs@email.com" />
+                </div>
 
-            <div class="formDiv">
-                <label>Email Address:</label>
-                <input type="text" placeholder="e.g. joe.blogs@email.com" />
-            </div>
+                <div class="formDiv">
+                    <label>Development Interests:</label>
+                    <input type="text" placeholder="e.g. programmer, designer, artist, writer" />
+                </div>
+            </fieldset>
+        </form>
+        
 
-            <div class="formDiv">
-                <label>Development Interests:</label>
-                <input type="text" placeholder="e.g. programmer, designer, artist, writer" />
-            </div>
-        </fieldset>
-    </form>
 
-    <div class="footer">
-        <p class="copyright">&copy;2022 HypeTrainJam</p>
-        <p class="copyright">All Rights Reserved</p>
+        <footer>
+            <p class="copyright">&copy;2022 HypeTrainJam</p>
+            <p class="copyright">All Rights Reserved</p>
+        </footer>
     </div>
 </body>
 </html>

@@ -4,12 +4,68 @@ div {
     font-family: 'Press Start 2P', cursive;
 }
 
+header {
+    grid-area: header;
+    top: 300px;
+    width: inherit;
+    background-color: #FFFFFF;
+    z-index: 1;
+    height: 70px;
+}
+
+nav {
+    grid-area: nav;
+    width: inherit;
+    z-index: 1;
+    height: 50px;
+    clear: both;
+    display: table;
+}
+
+.main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background: #fdb338;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+}
+
+.left {
+    grid-area: left;
+    margin-top: 10px;
+    background-color: #025196;
+    font-size: 4vw;
+}
+
+.indexGrid {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 
+                         'nav nav nav nav nav nav' 
+                         'main main main main main main'
+                         'right right right right right right'
+                         'footer footer footer footer footer footer';
+}
+
+.contactsGrid {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 
+                         'nav nav nav nav nav nav' 
+                         'form form form form form form' 
+                         'left left left left left left'
+                         'footer footer footer footer footer footer';
+}
+
 body {
     margin: 0;
     background-image: url("pics/backgroundTileSmall.png");
     background-repeat: repeat;
     background-size: initial;
-    font-size: 28px;
     color: #ffffff;
 }
 
@@ -19,14 +75,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.header {
-    top: 300px;
-    width: inherit;
-    background-color: #FFFFFF;
-    z-index: 1;
-    height: 70px;
 }
 
 .topColumn {
@@ -78,8 +126,6 @@ body {
     position: absolute;
     width: 100%;
     background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
     font-size: 2vw;
 }
 
@@ -106,15 +152,6 @@ body {
     color: #fdb338;
 }
 
-.footer {
-    background: #fdb338;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    text-align: right;
-}
-
 .copyright {
     align-content: end;
     font-family: Arial, sans-serif;
@@ -123,10 +160,31 @@ body {
     margin: 10px;
 }
 
-.contactForm {
-    font-family: 'Press Start 2P', cursive;
+.lblContacts {
     font-size: 3vw;
+    margin-left: 10px;
+}
+
+.lblEmail {
+    font-size: 2vw;
+    margin-left: 10px;
+}
+
+.socialImgBlock {
+    text-align: center;
+}
+
+.socialImage {
+    width: 20%;
+    height: inherit;
+    padding: 10px;
+}
+
+.contactForm {
+    grid-area: form;
+    font-family: 'Press Start 2P', cursive;
     background-color: #025196;
+    margin-top: 5%;    
 }
 
 .formDiv {
@@ -145,25 +203,54 @@ input {
         background-image: url("pics/backgroundTile.png");
     }
 
+    .indexGrid {
+        display: grid;
+        grid-template-areas: 'header header header header header header' 
+                             'nav nav nav nav nav nav'
+                             'main main main main right right'
+                             'footer footer footer footer footer footer';
+    }
+
+    .contactsGrid {
+        display: grid;
+        grid-template-areas: 'header header header header header header' 
+                             'nav nav nav nav nav nav' 
+                             'left form form form form form'
+                             'footer footer footer footer footer footer';
+    }
+
+    .left {
+        margin-top: 0px;
+    }
+
+    .lblContacts {
+        font-size: 2vw;
+    }
+
+    .lblEmail {
+        font-size: 1vw;
+    }
+
     .HTJLogo {
         width: 300px;
         height: 100px;
         float: left;
     }
 
-    .header {
+    header {
         height: 100px;
     }
 
     .topButton {
         font-size: 2.1vw;
+        float: left;
     }
 
     .topDropBtn {
         font-size: 2.2vw;
     }
 
-    .footer {
+    footer {
         height: 70px;
     }
 
@@ -172,7 +259,7 @@ input {
     }
 
     .contactForm {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
 
     .formDiv {
@@ -181,7 +268,7 @@ input {
 
     input {
         float: right;
-        width: 50%;
+        width: 45%;
         margin-top: 0px;
     }
 }
