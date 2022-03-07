@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<html lang="en">
+
 <head>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -7,3 +9,41 @@
     <title>YoungMinds</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
+
+<body>
+    <div id="youngGrid">
+        <header>
+            <a class="image" href="index.html"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a>
+        </header>
+
+        <nav>
+            <div class="topColumn">
+                <button class="topButton" onclick="btnHomeClick()">Home</button>
+            </div>
+
+            <div class="topColumn">
+                <button class="topButton" onclick="btnDownloadsClick()">Downloads</button>
+            </div>
+
+            <div class="topColumn">
+                <div class="dropdown">
+                    <button class="topDropBtn">Charities</button>
+                    <div class="dropdown-content">
+                        <a href="YoungMinds.html">YoungMinds</a>
+                        <a href="Mind.html">Mind</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topColumn">
+                <button class="topButton" onclick="btnContactClick()">Contact Us</button>
+            </div>
+        </nav>
+
+        <footer>
+            <p class="copyright">&copy;2022 HypeTrainJam</p>
+            <p class="copyright">All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

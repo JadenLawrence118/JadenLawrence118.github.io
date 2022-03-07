@@ -4,6 +4,11 @@ div {
     font-family: 'Press Start 2P', cursive;
 }
 
+h1 {
+    font-size: 5vw;
+    font-weight: normal;
+}
+
 header {
     grid-area: header;
     top: 300px;
@@ -22,8 +27,19 @@ nav {
     display: table;
 }
 
-.main {
+main {
     grid-area: main;
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.right {
+    grid-area: right;
+    background-color: #FFFFFF;
+    height: 60vh;
+    width: 100%;
+    overflow: scroll;
 }
 
 footer {
@@ -31,34 +47,53 @@ footer {
     background: #fdb338;
     height: 50px;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     text-align: right;
 }
 
-.left {
-    grid-area: left;
-    margin-top: 10px;
-    background-color: #025196;
-    font-size: 4vw;
+#indexGrid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas: 'header' 
+                         'nav' 
+                         'main'
+                         'right'
+                         'footer';
 }
 
-.indexGrid {
+#downGrid {
     display: grid;
-    grid-template-areas: 'header header header header header header' 
-                         'nav nav nav nav nav nav' 
-                         'main main main main main main'
-                         'right right right right right right'
+    grid-template-columns: 100vw;
+    grid-template-areas: 'header'
+                         'nav'
+                         'main'
+                         'games'
+                         'footer';
+}
+
+#mindGrid {
+    display: grid;
+    grid-template-areas: 'header header header header header header'
+                         'nav nav nav nav nav nav'
                          'footer footer footer footer footer footer';
 }
 
-.contactsGrid {
+#youngGrid {
     display: grid;
     grid-template-areas: 'header header header header header header' 
-                         'nav nav nav nav nav nav' 
-                         'form form form form form form' 
-                         'left left left left left left'
+                         'nav nav nav nav nav nav'
                          'footer footer footer footer footer footer';
+}
+
+#contactsGrid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas: 'header' 
+                         'nav' 
+                         'form' 
+                         'main' 
+                         'footer';
 }
 
 body {
@@ -82,13 +117,14 @@ body {
     width: 25%;
 }
 
-.topRow::after {
+.topRow {
     clear: both;
-    display: table;
+    display: flex;
 }
 
 .topButton {
     height: 50px;
+    width: 100%;
     background: #fdb338;
     color: #000000;
     margin-bottom: 10px;
@@ -117,6 +153,7 @@ body {
 }
 
 .dropdown {
+    width: 100%;
     position: relative;
     display: inline-block;
 }
@@ -161,12 +198,12 @@ body {
 }
 
 .lblContacts {
-    font-size: 3vw;
+    font-size: 5vw;
     margin-left: 10px;
 }
 
 .lblEmail {
-    font-size: 2vw;
+    font-size: 3vw;
     margin-left: 10px;
 }
 
@@ -180,7 +217,7 @@ body {
     padding: 10px;
 }
 
-.contactForm {
+#contactForm {
     grid-area: form;
     font-family: 'Press Start 2P', cursive;
     background-color: #025196;
@@ -197,30 +234,88 @@ input {
     margin-top: 10px;
 }
 
+#info {
+    text-align: left;
+    margin: 20px;
+    font-size: 3vw;
+}
+
+.anyBG { /* For any div that needs a background */
+    background-color: #025196;
+    background-clip: content-box;
+    padding: 10px;
+}
+
+.Ws { /* Where and when labels on homepage */
+    text-align: left;
+    margin: 20px;
+    font-size: 3vw;
+    float: none;
+}
+
+.placeTime { /* Location and time labels on homepage */
+    text-align: left;
+    margin: 20px;
+    font-size: 3vw;
+    position: relative;
+    float: none;
+}
+
+.downText { /* Text on downloads page */
+    font-size: 3vw;
+}
+
+#gamesGrid {
+    grid-area: games;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 7vw;
+    justify-content: center;
+}
+
+.downPic {
+    width: 40vw;
+    height: 20vw;
+}
+
 @media only screen and (min-width: 600px) {
 
     body {
         background-image: url("pics/backgroundTile.png");
     }
 
-    .indexGrid {
+    #indexGrid {
         display: grid;
-        grid-template-areas: 'header header header header header header' 
-                             'nav nav nav nav nav nav'
-                             'main main main main right right'
-                             'footer footer footer footer footer footer';
+        grid-template-columns: 80vw 20vw;
+        grid-template-areas: 'header header' 
+                             'nav nav'
+                             'main right'
+                             'footer footer';
     }
 
-    .contactsGrid {
+    #contactsGrid {
         display: grid;
-        grid-template-areas: 'header header header header header header' 
-                             'nav nav nav nav nav nav' 
-                             'left form form form form form'
-                             'footer footer footer footer footer footer';
+        grid-template-columns: 30vw 70vw;
+        grid-template-areas: 'header header'
+                             'nav nav' 
+                             'main form'
+                             'footer footer';
     }
 
-    .left {
-        margin-top: 0px;
+    main {
+        margin-top: 5px;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    #info {
+        font-size: 1.25vw;
+    }
+
+    .right {
+        height: 100vh;
     }
 
     .lblContacts {
@@ -258,8 +353,9 @@ input {
         font-size: 16px;
     }
 
-    .contactForm {
+    #contactForm {
         font-size: 1.5vw;
+        margin-top: 100px;
     }
 
     .formDiv {
@@ -270,5 +366,30 @@ input {
         float: right;
         width: 45%;
         margin-top: 0px;
+    }
+    .Ws {
+        font-size: 1.25vw;
+        float: left;
+    }
+
+    .placeTime {
+        font-size: 1.25vw;
+        position: relative;
+        float: right;
+    }
+
+    #gamesGrid {
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 4vw;
+        justify-content: center;
+    }
+
+    .downText {
+        font-size: 1.25vw;
+    }
+
+    .downPic {
+        width: 20vw;
+        height: 10vw;
     }
 }

@@ -10,23 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<body>
-    <div class="contactsGrid">
+<body onload="footerLocation()">
+    <div id="contactsGrid">
         <header>
             <a class="image" href="index.html"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a>
         </header>
 
         <nav>
             <div class="topColumn">
-                <button class="topButton" onclick="btnHomeClick()" style="width:100%">Home</button>
+                <button class="topButton" onclick="btnHomeClick()">Home</button>
             </div>
 
             <div class="topColumn">
-                <button class="topButton" onclick="btnDownloadsClick()" style="width:100%">Downloads</button>
+                <button class="topButton" onclick="btnDownloadsClick()">Downloads</button>
             </div>
 
             <div class="topColumn">
-                <div class="dropdown" style="width:100%">
+                <div class="dropdown">
                     <button class="topDropBtn">Charities</button>
                     <div class="dropdown-content">
                         <a href="YoungMinds.html">YoungMinds</a>
@@ -36,27 +36,32 @@
             </div>
 
             <div class="topColumn">
-                <button class="topButton" onclick="btnContactClick()" style="width:100%">Contact Us</button>
+                <button class="topButton" onclick="btnContactClick()">Contact Us</button>
             </div>
         </nav>
 
-        <div class="left">
-            <label class="lblContacts">Host Contacts:</label>
-            <br>
-            <label class="lblEmail">contactus@hypetrainjam.net</label>
+        <main>
+            <div class="anyBG">
+                <label class="lblContacts">Host Contacts:</label>
+                <br>
+                <br>
+                <label class="lblEmail">contactus@hypetrainjam.net</label>
+                <br>
+                <br>
 
-            <div class="socialImgBlock">
-                <a href="https://www.facebook.com/"><img class="socialImage" src="pics/pixelFB.png" alt="Link to facebook"></a>
-                <a href="https://www.instagram.com/"><img class="socialImage" src="pics/pixelInsta.png" alt="Link to instagram"></a>
+                <div class="socialImgBlock">
+                    <a href="https://www.facebook.com/"><img class="socialImage" src="pics/pixelFB.png" alt="Link to facebook"></a>
+                    <a href="https://www.instagram.com/"><img class="socialImage" src="pics/pixelInsta.png" alt="Link to instagram"></a>
+                </div>
+
+                <div class="socialImgBlock">
+                    <a href="https://twitter.com/"><img class="socialImage" src="pics/pixelTwit.png" alt="Link to twitter"></a>
+                    <a href="https://uk.linkedin.com/"><img class="socialImage" src="pics/pixelLinkedIn.png" alt="Link to linked in"></a>
+                </div>
             </div>
+        </main>
 
-            <div class="socialImgBlock">
-                <a href="https://twitter.com/"><img class="socialImage" src="pics/pixelTwit.png" alt="Link to twitter"></a>
-                <a href="https://uk.linkedin.com/"><img class="socialImage" src="pics/pixelLinkedIn.png" alt="Link to linked in"></a>
-            </div>
-        </div>
-
-        <form class="contactForm">
+        <form id="contactForm">
             <fieldset>
                 <legend>Participant Entry Form</legend>
 

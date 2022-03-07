@@ -9,3 +9,10 @@ function btnDownloadsClick() {
 function btnContactClick() {
     parent.location = "contacts.html";
 }
+
+function footerLocation() {
+    if ((document.getElementsByClassName("contactsGrid").offsetHeight) < window.innerHeight) {
+        document.getElementById("footer").style.position = "absolute";
+        document.getElementById("footer").style.bottom = 0;
+    }
+}
