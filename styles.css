@@ -2,6 +2,7 @@
 
 div {
     font-family: 'Press Start 2P', cursive;
+    line-height: 1.5;
 }
 
 h1 {
@@ -47,7 +48,7 @@ footer {
     background: #fdb338;
     height: 50px;
     width: 100%;
-    position: relative;
+    position: absolute;
     bottom: 0;
     text-align: right;
 }
@@ -102,6 +103,8 @@ body {
     background-repeat: repeat;
     background-size: initial;
     color: #ffffff;
+    position: relative;
+    min-height: 100vh;
 }
 
 .HTJLogo {
@@ -209,6 +212,7 @@ body {
 
 .socialImgBlock {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .socialImage {
@@ -226,6 +230,25 @@ body {
 
 .formDiv {
     margin-top: 40px;
+}
+
+#btnSubmit {
+    height: 50px;
+    width: 100%;
+    background: #fdb338;
+    color: #000000;
+    margin-bottom: 10px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: thick;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.85vw;
+    margin-top: 20px;
+}
+
+    #btnSubmit:hover {
+    background: #000000;
+    color: #fdb338;
 }
 
 input {
@@ -269,14 +292,45 @@ input {
     grid-area: games;
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 7vw;
+    grid-gap: 8vw;
     justify-content: center;
+    margin-bottom: 100px;
+}
+
+.downSect {
+    width: 40vw;
+    height: 10vh;
 }
 
 .downPic {
     width: 40vw;
-    height: 20vw;
+    height: 10vh;
+    position: absolute;
+    z-index: 0;
 }
+
+.gameCaption {
+    height: 8vw;
+    width: 8vw;
+    background-image: url('pics/picInfo.png');
+    overflow: hidden;
+    background-size: cover;
+    font-size: 0px;
+    position: absolute;
+    z-index: 2;
+}
+
+    .gameCaption:hover {
+        height: inherit;
+        width: inherit;
+        background-image: none;
+        background-size: cover;
+        color: #ffffff;
+        background-color: #000000;
+        text-align: center;
+        font-size: 2vw;
+        line-height: 1.5;
+    }
 
 @media only screen and (min-width: 600px) {
 
@@ -315,7 +369,7 @@ input {
     }
 
     .right {
-        height: 100vh;
+        height: 80vh;
     }
 
     .lblContacts {
@@ -331,7 +385,7 @@ input {
         height: 100px;
         float: left;
     }
-
+    
     header {
         height: 100px;
     }
@@ -356,6 +410,7 @@ input {
     #contactForm {
         font-size: 1.5vw;
         margin-top: 100px;
+        margin-bottom: 30px;
     }
 
     .formDiv {
@@ -388,8 +443,22 @@ input {
         font-size: 1.25vw;
     }
 
+    .downSect {
+        width: 20vw;
+        height: 20vh;
+    }
+
     .downPic {
         width: 20vw;
-        height: 10vw;
+        height: 20vh;
     }
+
+    .gameCaption {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+        .gameCaption:hover {
+            font-size: 1vw;
+        }
 }
