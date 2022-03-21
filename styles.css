@@ -353,7 +353,7 @@ input {
 }
 
 .charityLogo {
-    height: 6vw;
+    height: 12vw;
     z-index: 1;
     position: absolute;
     bottom: 0;
@@ -535,6 +535,10 @@ input {
 
     .charityText {
         font-size: 1.5vw;
+    }
+
+    .charityLogo {
+        height: 6vh;
     }
 
     .btnDonate {
