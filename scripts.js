@@ -10,9 +10,10 @@ function btnContactClick() {
     parent.location = "contacts.html";
 }
 
-function footerLocation() {
-    if ((document.getElementsByClassName("contactsGrid").offsetHeight) < window.innerHeight) {
-        document.getElementById("footer").style.position = "absolute";
-        document.getElementById("footer").style.bottom = 0;
-    }
+function btnYoungMinds() {
+    parent.location = "https://www.youngminds.org.uk/support-us/donate/";
+}
+
+function btnMind() {
+    parent.location = "https://www.mind.org.uk/donate/";
 }

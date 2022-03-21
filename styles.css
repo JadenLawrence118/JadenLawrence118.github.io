@@ -2,7 +2,7 @@
 
 div {
     font-family: 'Press Start 2P', cursive;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 h1 {
@@ -23,7 +23,6 @@ nav {
     grid-area: nav;
     width: inherit;
     z-index: 1;
-    height: 50px;
     clear: both;
     display: table;
 }
@@ -75,16 +74,20 @@ footer {
 
 #mindGrid {
     display: grid;
-    grid-template-areas: 'header header header header header header'
-                         'nav nav nav nav nav nav'
-                         'footer footer footer footer footer footer';
+    grid-template-areas: 'header'
+                         'nav'
+                         'mindImages'
+                         'charityMain'
+                         'footer';
 }
 
 #youngGrid {
     display: grid;
-    grid-template-areas: 'header header header header header header' 
-                         'nav nav nav nav nav nav'
-                         'footer footer footer footer footer footer';
+    grid-template-areas: 'header'
+                         'nav'
+                         'youngImages'
+                         'charityMain'
+                         'footer';
 }
 
 #contactsGrid {
@@ -118,6 +121,7 @@ body {
 .topColumn {
     float: left;
     width: 25%;
+    height: 5vh;
 }
 
 .topRow {
@@ -249,7 +253,7 @@ body {
     #btnSubmit:hover {
     background: #000000;
     color: #fdb338;
-}
+    }
 
 input {
     width: 100%;
@@ -331,6 +335,60 @@ input {
         font-size: 2vw;
         line-height: 1.5;
     }
+
+.youngImages {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.charityPic {
+    width: 100%;
+}
+
+.mindImages {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.charityLogo {
+    height: 6vw;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+}
+
+.charityText {
+    text-align: center;
+}
+
+.charityMain {
+    text-align: center;
+}
+
+.btnDonate {
+    height: 50px;
+    width: 50%;
+    background: #fdb338;
+    color: #000000;
+    margin-bottom: 10px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: thick;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3vw;
+    margin-bottom: 7.5vh;
+}
+
+    .btnDonate:hover {
+        background: #000000;
+        color: #fdb338;
+    }
+
+.mobileHide {
+    display: none;
+}
 
 @media only screen and (min-width: 600px) {
 
@@ -461,4 +519,26 @@ input {
         .gameCaption:hover {
             font-size: 1vw;
         }
+
+    .youngImages {
+        grid-template-columns: 50% 50%;
+    }
+
+    .mindImages {
+        grid-template-columns: 60% 40%;
+    }
+
+    .charityText {
+        font-size: 1.5vw;
+    }
+
+    .btnDonate {
+        width: 30vw;
+        font-size: 2vw;
+        margin-bottom: 12vh;
+    }
+
+    .mobileHide {
+        display:inherit;
+    }
 }
