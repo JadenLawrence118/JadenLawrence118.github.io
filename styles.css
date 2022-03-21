@@ -246,7 +246,7 @@ body {
     border-style: solid;
     border-width: thick;
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.85vw;
+    font-size: 5vw;
     margin-top: 20px;
 }
 
@@ -480,6 +480,11 @@ input {
         width: 45%;
         margin-top: 0px;
     }
+
+    #btnSubmit {
+        font-size: 1.85vw;
+    }
+
     .Ws {
         font-size: 1.25vw;
         float: left;
