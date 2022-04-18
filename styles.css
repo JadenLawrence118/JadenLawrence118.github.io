@@ -34,6 +34,23 @@ main {
     text-align: center;
 }
 
+#paraWelcome {
+    font-size: 3vw;
+}
+
+#btnWelcome {
+    height: 50px;
+    width: 40%;
+    background: #fdb338;
+    color: #000000;
+    margin-bottom: 10px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: thick;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5vw;
+}
+
 .right {
     grid-area: right;
     background-color: #FFFFFF;
@@ -321,7 +338,7 @@ input {
     background-size: cover;
     font-size: 0px;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 }
 
     .gameCaption:hover {
@@ -353,7 +370,7 @@ input {
 }
 
 .charityLogo {
-    height: 12vw;
+    height: 5vh;
     z-index: 1;
     position: absolute;
     bottom: 0;
@@ -422,6 +439,10 @@ input {
         font-size: 3vw;
     }
 
+    #paraWelcome {
+        font-size: 2vw;
+    }
+
     #info {
         font-size: 1.25vw;
     }
@@ -468,7 +489,7 @@ input {
     #contactForm {
         font-size: 1.5vw;
         margin-top: 100px;
-        margin-bottom: 30px;
+        margin-bottom: 100px;
     }
 
     .formDiv {
@@ -538,7 +559,7 @@ input {
     }
 
     .charityLogo {
-        height: 6vh;
+        height: 11vh;
     }
 
     .btnDonate {
