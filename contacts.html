@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="pics/HTJIcon.ico" type="image/x-icon">
     <title>Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 
         <main>
             <div class="anyBG">
-                <label class="lblContacts">Host Contacts:</label>
+                <label class="lblContacts">Host Contacts:</label> <!-- Labels are used here instead of paragraphs -->
                 <br>
                 <br>
                 <label class="lblEmail">contactus@hypetrainjam.net</label>
@@ -61,23 +62,23 @@
             </div>
         </main>
 
-        <form id="contactForm">
+        <form id="contactForm"> <!-- The form is used to receive participant information -->
             <fieldset>
-                <legend>Participant Entry Form</legend>
+                <legend>Participant Entry Form</legend> <!-- The legend acts as a title for the form -->
 
                 <div class="formDiv">
-                    <label>Full Name:*</label>
-                    <input type="text" placeholder="e.g. Joe Bloggs" required />
+                    <label>Full Name:*</label> <!-- Asterisks are used to signify that this field is required -->
+                    <input type="text" placeholder="e.g. Joe Bloggs" required /> <!-- The 'required' attribute makes this a required field. The 'placeholder' text remains in the input box until the user enters their own text. The 'type' lets the browser know what type of input to take -->
                 </div>
 
                 <div class="formDiv">
                     <label>Email Address:*</label>
-                    <input type="email" placeholder="e.g. joe.bloggs@email.com" required />
+                    <input type="email" placeholder="e.g. joe.bloggs@email.com" required /> <!-- The input type being email tells the browser that there must be an @ in the field -->
                 </div>
 
                 <div class="formDiv">
                     <label>Date of Birth:</label>
-                    <input type="date" />
+                    <input type="date" /> <!-- The date type tells browsers a date must be input. Most browsers will display a calendar to select a date from -->
                 </div>
 
                 <div class="formDiv">
@@ -85,7 +86,7 @@
                     <input type="text" placeholder="e.g. programmer, designer, artist, writer" />
                 </div>
 
-                <button id="btnSubmit">Submit</button>
+                <button id="btnSubmit">Submit</button> <!-- The submit button would be used to send the inputted data to a database or spreadsheet -->
             </fieldset>
         </form>
         

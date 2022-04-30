@@ -1,85 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');    /* Importing the font "Press Start 2P" by CodeMan38 from Google Fonts */
 
-div {
-    font-family: 'Press Start 2P', cursive;
-    line-height: 1.6;
+div { /* Attributes of all divs */
+    font-family: 'Press Start 2P', cursive; /* Setting the font that will be used */
+    line-height: 1.6; /* Setting custom line spacing because the default is quite cramped */
 }
 
-h1 {
+h1 { /* Attributes of all headings using the h1 tag */
     font-size: 5vw;
     font-weight: normal;
 }
 
-header {
-    grid-area: header;
-    top: 300px;
-    width: inherit;
-    background-color: #FFFFFF;
-    z-index: 1;
+header { /* Attributes of the header class, a HTML5 specific tag */
+    grid-area: header; /* Setting the name the element will be known as in the grid-template-areas */
+    width: inherit; /* Setting the width to be responsive to the width of the viewport */
+    background-color: #FFFFFF; /* Setting the background colour to white, with the use of a hex code */
+    z-index: 1; /* Setting its position on the z-axis, bringing it forward */
     height: 70px;
 }
 
-nav {
+nav { /* Attributes of the navbar, a HTML5 specific tag */
     grid-area: nav;
     width: inherit;
     z-index: 1;
-    clear: both;
-    display: table;
+    display: table; /* Setting the display style to be a table, since the navbar is a row with 4 columns */
 }
 
-main {
+main { /* Attributes of the main content within the homepage. Main is a HTML5 specific tag */
     grid-area: main;
     margin-top: 10px;
     font-family: 'Press Start 2P', cursive;
-    text-align: center;
+    text-align: center; /* Aligning the content within this div to be centred */
 }
 
-#paraWelcome {
+#paraWelcome { /* The paragraph used on the welcome screen, before the user clicks the button */
     font-size: 3vw;
 }
 
-#btnWelcome {
-    height: 50px;
-    width: 40%;
-    background: #fdb338;
-    color: #000000;
-    margin-bottom: 10px;
+#btnWelcome { /* The button displayed on the welcome screen, which displays the rest of the content when clicked */
+    height: 50px; /* Giving the button a pixel height */
+    width: 40%; /* Giving the button a width as a percentage of its parent (the div it's in) */
+    background: #fdb338; /* Setting the background colour with a hex code */
+    color: #000000; /* Setting the text colour with a hex code */
+    margin-bottom: 10px; /* Setting space underneath the button */
     border-color: #000000;
     border-style: solid;
     border-width: thick;
     font-family: 'Press Start 2P', cursive;
-    font-size: 2.5vw;
+    font-size: 2.5vw; /* Using the viewport width to set font size makes it responsive */
 }
 
-.right {
+    #btnWelcome:hover { /* Changes that the button will undergo when hovered over */
+        background: #000000;
+        color: #fdb338;
+    }
+
+.right { /* The content on the right of the homepage, the Twitter feed */
     grid-area: right;
     background-color: #FFFFFF;
     height: 60vh;
     width: 100%;
-    overflow: scroll;
+    overflow: scroll; /* Causes the content to become scrollable when it exceeds the specified height */
 }
 
-footer {
+footer { /* The area at the bottom of the page containing copyright info */
     grid-area: footer;
     background: #fdb338;
     height: 50px;
-    width: 100%;
-    position: absolute;
+    width: 100%; /* Setting the width to fill the entire width of the screen */
+    position: absolute; /* Sets the location of the footer to be at the bottom of the screen, no matter what */
     bottom: 0;
     text-align: right;
 }
 
-#indexGrid {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-areas: 'header' 
+#indexGrid {    /* The grid layout of the homepage */
+    display: grid;  /* Telling the browser that this is a grid */
+    grid-template-columns: 100vw;   /* Setting a width of each of the columns, in this case the whole width of the page */
+    grid-template-areas: 'header'   /* Specifying the layout of each of the grid areas */
                          'nav' 
                          'main'
                          'right'
                          'footer';
 }
 
-#downGrid {
+#downGrid { /* The grid layout of the downloads page */
     display: grid;
     grid-template-columns: 100vw;
     grid-template-areas: 'header'
@@ -89,7 +92,7 @@ footer {
                          'footer';
 }
 
-#mindGrid {
+#mindGrid { /* The grid layout of the Mind charity page */
     display: grid;
     grid-template-areas: 'header'
                          'nav'
@@ -98,7 +101,7 @@ footer {
                          'footer';
 }
 
-#youngGrid {
+#youngGrid {    /* The grid layout of the YoungMinds charity page */
     display: grid;
     grid-template-areas: 'header'
                          'nav'
@@ -107,7 +110,7 @@ footer {
                          'footer';
 }
 
-#contactsGrid {
+#contactsGrid { /* The grid layout of the contacts page */
     display: grid;
     grid-template-columns: 100vw;
     grid-template-areas: 'header' 
@@ -117,36 +120,36 @@ footer {
                          'footer';
 }
 
-body {
-    margin: 0;
-    background-image: url("pics/backgroundTileSmall.png");
-    background-repeat: repeat;
+body { /* Attributes of the page itself, not specifying any elements */
+    margin: 0; /* Removes the default value for the margin of the body */
+    background-image: url("pics/backgroundTileSmall.png"); /* Sets the background image of the page */
+    background-repeat: repeat; /* Causes the backgroumd image to repeat, creating a tiled effect */
     background-size: initial;
     color: #ffffff;
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; /* Setting the height based on the height of the viewport */
 }
 
-.HTJLogo {
+.HTJLogo { /* The logo in the top left of every page */
     width: 210px;
     height: 70px;
-    display: block;
+    display: block; /* Ensures that no other elements will be horizontally aligned with it */
     margin-left: auto;
     margin-right: auto;
 }
 
-.topColumn {
-    float: left;
+.topColumn { /* A column in the navbar in which a button will be */
+    float: left; /* Causes each column to move as far left as it can go before overlapping another object */
     width: 25%;
     height: 5vh;
 }
 
-.topRow {
+.topRow { /* The row in the navbar in which the buttons will be */
     clear: both;
-    display: flex;
+    display: flex; /* Causes the buttons within the navbar to fill the space that they have */
 }
 
-.topButton {
+.topButton { /* The buttons within the navbar */
     height: 50px;
     width: 100%;
     background: #fdb338;
@@ -159,12 +162,12 @@ body {
     font-size: 1.85vw;
 }
 
-    .topButton:hover {
+    .topButton:hover { /* The style of the navbar buttons when they are hovered over */
         background: #000000;
         color: #fdb338;
     }
 
-.topDropBtn {
+.topDropBtn { /* The navbar button which creates a dropdown menu */
     height: 50px;
     width: 100%;
     background: #fdb338;
@@ -176,13 +179,13 @@ body {
     font-size: 1.85vw;
 }
 
-.dropdown {
+.dropdown { /* The dropdown menu */
     width: 100%;
-    position: relative;
+    position: relative; /* Setting the dropdwon menu to display in a position relative to its parent, the button */
     display: inline-block;
 }
 
-.dropdown-content {
+.dropdown-content { /* The content within the dropdown menu */
     display: none;
     position: absolute;
     width: 100%;
@@ -190,70 +193,70 @@ body {
     font-size: 2vw;
 }
 
-    .dropdown-content a {
+    .dropdown-content a { /* The links within the dropdown menu */
         background: #fdb338;
         color: black;
         padding: 12px 0px;
-        text-decoration: none;
+        text-decoration: none; /* Removes the default hyperlink style, blue text underlined */
         text-align: center;
         display: block;
     }
 
-        .dropdown-content a:hover {
+        .dropdown-content a:hover { /* The style of the links in the dropdown menu when they are hovered over */
             background: #000000;
             color: #fdb338;
         }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content { /* Causes the dropdown menu to appear when the button is hovered over */
     display: block;
 }
 
-.dropdown:hover .topDropBtn {
+.dropdown:hover .topDropBtn { /* The style of the button when the button and dropdown menu are hovered over */
     background: #000000;
     color: #fdb338;
 }
 
-.copyright {
-    align-content: end;
+.copyright { /* The copyright text in the footer */
+    align-content: end; /* Causes the elements within to be aligned on the right */
     font-family: Arial, sans-serif;
     font-size: 10px;
     color: #000000;
     margin: 10px;
 }
 
-.lblContacts {
+.lblContacts { /* The label which contains contact info on the contacts page */
     font-size: 5vw;
     margin-left: 10px;
 }
 
-.lblEmail {
+.lblEmail { /* The label which contains the contact email */
     font-size: 3vw;
     margin-left: 10px;
 }
 
-.socialImgBlock {
+.socialImgBlock { /* The div containing the social media links on the contacts page */
     text-align: center;
     margin-bottom: 50px;
 }
 
-.socialImage {
+.socialImage { /* The social medeia link images */
     width: 20%;
     height: inherit;
     padding: 10px;
 }
 
-#contactForm {
+#contactForm { /* The contact form on the contacts page */
     grid-area: form;
     font-family: 'Press Start 2P', cursive;
     background-color: #025196;
-    margin-top: 5%;    
+    margin-top: 5%;
 }
 
-.formDiv {
+.formDiv { /* The div containing the contact form */
     margin-top: 40px;
 }
 
-#btnSubmit {
+#btnSubmit { /* The submit button under the form */
     height: 50px;
     width: 100%;
     background: #fdb338;
@@ -267,18 +270,18 @@ body {
     margin-top: 20px;
 }
 
-    #btnSubmit:hover {
-    background: #000000;
-    color: #fdb338;
+    #btnSubmit:hover { /* The styles of the form's submit button when hovered over */
+        background: #000000;
+        color: #fdb338;
     }
 
-input {
+input { /* The input boxes in the form */
     width: 100%;
     height: 3vh;
     margin-top: 10px;
 }
 
-#info {
+#info { /* The information paragraph on the homepage */
     text-align: left;
     margin: 20px;
     font-size: 3vw;
@@ -286,7 +289,7 @@ input {
 
 .anyBG { /* For any div that needs a background */
     background-color: #025196;
-    background-clip: content-box;
+    background-clip: content-box; /* Setting the backgrounnd to fill only the content, ignoring borders and padding */
     padding: 10px;
 }
 
@@ -295,6 +298,7 @@ input {
     margin: 20px;
     font-size: 3vw;
     float: none;
+    display: block;
 }
 
 .placeTime { /* Location and time labels on homepage */
@@ -303,13 +307,18 @@ input {
     font-size: 3vw;
     position: relative;
     float: none;
+    display: block;
 }
 
 .downText { /* Text on downloads page */
     font-size: 3vw;
 }
 
-#gamesGrid {
+.caption { /* The text within the information box on each donloadble game */
+    text-align: center;
+}
+
+#gamesGrid { /* The grid layout of the games on the downloads page */
     grid-area: games;
     display: grid;
     grid-template-columns: auto auto;
@@ -318,19 +327,19 @@ input {
     margin-bottom: 100px;
 }
 
-.downSect {
+.downSect { /* A section in which a donloadable game will be. 2 per line on mobile, 3 on tablet, and 4 on PC*/
     width: 40vw;
     height: 10vh;
 }
 
-.downPic {
+.downPic { /* The picture displayed to represent each downloadable game (currently placeholder images) */
     width: 40vw;
     height: 10vh;
     position: absolute;
     z-index: 0;
 }
 
-.gameCaption {
+.gameCaption { /* The caption and information icon for each downloadable game (currently placeholder text) */
     height: 8vw;
     width: 8vw;
     background-image: url('pics/picInfo.png');
@@ -341,7 +350,7 @@ input {
     z-index: 1;
 }
 
-    .gameCaption:hover {
+    .gameCaption:hover { /* The style of the games' captions when hovered over. This displays the text of the caption */
         height: inherit;
         width: inherit;
         background-image: none;
@@ -353,38 +362,38 @@ input {
         line-height: 1.5;
     }
 
-.youngImages {
+.youngImages { /* The promotional images used on the YoungMinds charity page */
     position: relative;
     display: grid;
     grid-template-columns: 100%;
 }
 
-.charityPic {
+.charityPic { /* Each individual promotional image used on the charity pages */
     width: 100%;
 }
 
-.mindImages {
+.mindImages { /* The promotional images used on the Mind charity page */
     position: relative;
     display: grid;
     grid-template-columns: 100%;
 }
 
-.charityLogo {
+.charityLogo { /* The charity logos at the bottom left of the charity promotional images */
     height: 5vh;
     z-index: 1;
     position: absolute;
     bottom: 0;
 }
 
-.charityText {
+.charityText { /* The promotional images used on the YoungMinds charity page */
     text-align: center;
 }
 
-.charityMain {
+.charityMain { /* The text explaining what the charities are all about */
     text-align: center;
 }
 
-.btnDonate {
+.btnDonate { /* The donate button at the bottom of the charity pages that takes you to the charities' respective donation pages */
     height: 50px;
     width: 50%;
     background: #fdb338;
@@ -398,16 +407,84 @@ input {
     margin-bottom: 7.5vh;
 }
 
-    .btnDonate:hover {
+    .btnDonate:hover { /* The styles of the donate buttons */
         background: #000000;
         color: #fdb338;
     }
 
-.mobileHide {
+.mobileHide { /* Any element that will not be displayed on mobile */
     display: none;
 }
 
-@media only screen and (min-width: 600px) {
+.desktopHide {  /* Any element that will not be displayed on desktop */
+    display: inherit;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) { /* Styles that will appear on tablet screens */
+
+    #btnWelcome {
+        height: 100px;
+        font-size: 3vw;
+    }
+
+    .right {
+        height: 1000px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    footer {
+        height: 75px;
+    }
+
+    #gamesGrid {
+        grid-template-columns: auto auto auto;
+        grid-gap: 2vh;
+    }
+
+    .downSect {
+        width: 30vw;
+        height: 12vh;
+    }
+
+    .downText {
+        font-size: 2.5vw;
+    }
+
+    .downPic {
+        width: 30vw;
+        height: 12vh;
+    }
+
+    .gameCaption:hover {
+        font-size: 1.5vw;
+    }
+
+    .charityText {
+        font-size: 2.75vw;
+    }
+
+   legend {
+       font-size: 3vw;
+   } 
+
+    label {
+        font-size: 3vw;
+    }
+
+    #btnSubmit {
+        font-size: 3.5vw;
+    }
+
+    .socialImgBlock {
+        margin-bottom: 75px;
+    }
+
+}
+
+@media only screen and (min-width: 769px) { /* Styles that will appear on desktop screens */
 
     body {
         background-image: url("pics/backgroundTile.png");
@@ -520,7 +597,6 @@ input {
     #gamesGrid {
         grid-template-columns: auto auto auto auto;
         grid-gap: 4vw;
-        justify-content: center;
     }
 
     .downText {
@@ -570,5 +646,9 @@ input {
 
     .mobileHide {
         display:inherit;
+    }
+
+    .desktopHide {
+        display: none;
     }
 }
