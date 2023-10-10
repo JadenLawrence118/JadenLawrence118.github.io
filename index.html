@@ -1,90 +1,49 @@
-<!DOCTYPE html> <!-- Declaring that this is a HTML document -->
+<!DOCTYPE html> 
 
-<html lang="en"> <!-- Declaring the language of the page -->
+<html lang="en">
 
 <head>
-    <script src="scripts.js"></script> <!-- Binding the javascript file to this HTML file -->
-    <link rel="stylesheet" href="styles.css"> <!-- Binding the stylesheet to this HTML file -->
-    <link rel="shortcut icon" href="pics/HTJIcon.ico" type="image/x-icon"> <!-- Displaying an icon for the head of the page, next to the title -->
-    <title>Hype Train Jam</title> <!-- Setting a title for the page to be displayed in the head -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Tells the browser how to control dimensions and scales for different screen sizes -->
-    <meta charset="utf-8" /> <!-- The browser needs to be informed of which character set to use -->
+    <script src="scripts.js"></script> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="pics/HTJIcon.ico" type="image/x-icon">
+    <title>Jaden Lawrence</title>   
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <meta charset="utf-8" /> 
 </head>
 
-<body onload="welcome()"> <!-- Calling the 'welcome' function when the body of the page loads -->
-    <div id="indexGrid"> <!-- This div will be used as the grid for the grid-based layout of the page, and will wrap around everything -->
-        <header>
-            <a href="index.html"><img class="HTJLogo" src="pics/HTJLogo.png" alt="Hype Train Jam logo"></a> <!-- The logo in the top corner. It is also a link, which can be clicked to take the user back to the homepage -->
-        </header>
+<body onload="welcome()"> 
+    <div id="indexGrid">
 
-            <nav>   <!-- The navbar contains all navigation buttons. It is a HTML5 specific element -->
-                <div class="topColumn"> <!-- Each navigation button is placed within a flexbox div in order to fill exactly one quarter of the width of the screen each -->
-                    <button class="topButton" onclick="btnHomeClick()">Home</button> <!-- Clicking the button calls a function which takes the user to the specified page -->
-                </div>
 
-                <div class="topColumn">
-                    <button class="topButton" onclick="btnDownloadsClick()">Downloads</button>
-                </div>
+            <header>
+                <a href="index.html"><img id="SelfLogo" src="pics/TLDLogo.png" alt="Jaden Lawrence logo"></a> 
+                <a href="index.html"><img id="name" src="pics/pixel name.png" alt="Jaden Lawrence"></a>
 
-                <div class="topColumn">
-                    <div class="dropdown">
-                        <button class="topDropBtn">Charities</button>
-                        <div class="dropdown-content"> <!-- This div holds the links displayed within the dropdwon menu -->
-                            <a href="YoungMinds.html">YoungMinds</a> <!-- Links within the dropdown menu that act as buttons leading to other pages -->
-                            <a href="Mind.html">Mind</a>
-                        </div>
-                    </div>
-                </div>
+                <nav>
+                        <button class="topButton" onclick="btnHomeClick()">Home</button> 
 
-                <div class="topColumn">
-                    <button class="topButton" onclick="btnContactClick()">Contact Us</button>
-                </div>
-            </nav>
+                        <button class="topButton" onclick="btnAboutClick()">About</button>
 
+                        <button class="topButton" onclick="btnPortfoliolick()">Portfolio</button>
+
+                        <button class="topButton" onclick="btnContactClick()">Contact</button>
+                </nav>
+            </header>
+
+            
         <main>
-            <div class="anyBG"> <!-- A div used to create a background that wraps around any content -->
-                <h1>Welcome to Hype Train Jam!</h1> <!-- The heading of the page -->
-                <p id="paraWelcome">Click here for info about the event!</p> <!-- This text will disappear when the welcome button is clicked -->
-                <button id="btnWelcome" onclick="btnWelcomeClick()">Click here!</button> <!-- Welcome button, which will display the main content when clicked -->
-                <p class="Ws"><u>Where are we?</u></p>
-                <br class="desktopHide"> <!-- Page breaks are used to seperate elements. The class used here shows that these breaks will be removed on desktop -->
-                <p class="placeTime">Engine Shed (next to Temple Meads Station)</p>
-                <br class="desktopHide">
-                <br class="mobileHide"> <!-- The class used here shows that these breaks will be removed on mobile -->
-                <br class="mobileHide">
-                <br class="mobileHide">
-                <br class="mobileHide">
-                <p class="Ws"><u>When?</u></p>
-                <br class="desktopHide">
-                <p class="placeTime">27th &ndash; 29th August 2022</p> <!-- Some symbols do not work when displayed as plaintext, so a symbol entity must be used -->
-                <br>
-                <br>
-                <br class="mobileHide">
-                <br class="mobileHide">
-                <p id="info">
-                    Event will also be held virtually via Zoom. Link will be posted here at the time of the event
-                    <br>
-                    <br>
-                    <br class="mobileHide">
-                    Your mission, if you choose to accept it:
-                    <br>
-                    <br>
-                    All games must follow the classic video game theme. They must also contain a train somewhere within the game. It&rsquo;s dangerous to go alone&hellip;joint submissions will also be accepted.
-                    <br>
-                    <br>
-                    <br>
-                    So now you know where and when, get over here!
-                </p>
-            </div>
+            <img id="homeBigPic" src="pics/Pixel pfp.png" alt="Jaden Lawrence">
         </main>
 
-        <div class="right"> <!-- This div is for the grid area on the right of the screen -->
-            <a class="twitter-timeline" href="https://twitter.com/globalgamejam?ref_src=twsrc%5Etfw">Tweets by globalgamejam</a> <!-- The Twitter API -->
-            <script async src="https://platform.twitter.com/widgets.js"></script>
+        <div class="right">
+            <div class="contentBox">
+                <h2>Welcome</h2>
+                Welcome to my website
+            </div>
         </div>
 
         <footer>
-            <p class="copyright">&copy;2022 HypeTrainJam</p>
+            <p class="copyright">&copy;2023 Jaden Lawrence Official Website</p>
             <p class="copyright">All Rights Reserved</p>
         </footer>
     </div>

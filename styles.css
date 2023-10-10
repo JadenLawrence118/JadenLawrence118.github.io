@@ -1,431 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');    /* Importing the font "Press Start 2P" by CodeMan38 from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');    /* "Press Start 2P" by CodeMan38 from Google Fonts */
 
-div { /* Attributes of all divs */
-    font-family: 'Press Start 2P', cursive; /* Setting the font that will be used */
-    line-height: 1.6; /* Setting custom line spacing because the default is quite cramped */
+div {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0.2;
+    font-size: 16px;
 }
 
-h1 { /* Attributes of all headings using the h1 tag */
+h1 {
     font-size: 5vw;
     font-weight: normal;
 }
 
-header { /* Attributes of the header class, a HTML5 specific tag */
-    grid-area: header; /* Setting the name the element will be known as in the grid-template-areas */
-    width: inherit; /* Setting the width to be responsive to the width of the viewport */
-    background-color: #FFFFFF; /* Setting the background colour to white, with the use of a hex code */
-    z-index: 1; /* Setting its position on the z-axis, bringing it forward */
+header { 
+    grid-area: header; 
+    width: inherit; 
+    background-color: #000000; 
+    z-index: 1; 
     height: 70px;
+    align-items: center;
+    display: flex;
 }
 
-nav { /* Attributes of the navbar, a HTML5 specific tag */
+nav { 
     grid-area: nav;
     width: inherit;
+    background-color: #000000;
     z-index: 1;
-    display: table; /* Setting the display style to be a table, since the navbar is a row with 4 columns */
+    display: table; 
+    align-items: center;
 }
 
-main { /* Attributes of the main content within the homepage. Main is a HTML5 specific tag */
+main { 
     grid-area: main;
-    margin-top: 10px;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center; /* Aligning the content within this div to be centred */
+    text-align: center;
 }
 
-#paraWelcome { /* The paragraph used on the welcome screen, before the user clicks the button */
-    font-size: 3vw;
+#homeBigPic {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
 }
 
-#btnWelcome { /* The button displayed on the welcome screen, which displays the rest of the content when clicked */
-    height: 50px; /* Giving the button a pixel height */
-    width: 40%; /* Giving the button a width as a percentage of its parent (the div it's in) */
-    background: #fdb338; /* Setting the background colour with a hex code */
-    color: #000000; /* Setting the text colour with a hex code */
-    margin-bottom: 10px; /* Setting space underneath the button */
+#btnWelcome {
+    height: 50px;
+    width: 40%;
+    background: #fdb338;
+    color: #000000;
+    margin-bottom: 10px; 
     border-color: #000000;
     border-style: solid;
     border-width: thick;
     font-family: 'Press Start 2P', cursive;
-    font-size: 2.5vw; /* Using the viewport width to set font size makes it responsive */
+    font-size: 2.5vw;
 }
 
-    #btnWelcome:hover { /* Changes that the button will undergo when hovered over */
+    #btnWelcome:hover { 
         background: #000000;
         color: #fdb338;
     }
 
-.right { /* The content on the right of the homepage, the Twitter feed */
+.right { 
     grid-area: right;
-    background-color: #FFFFFF;
     height: 60vh;
     width: 100%;
-    overflow: scroll; /* Causes the content to become scrollable when it exceeds the specified height */
 }
 
-footer { /* The area at the bottom of the page containing copyright info */
+.contentBox {
+    padding: 0px 20px 0px 20px;
+}
+
+footer {
     grid-area: footer;
-    background: #fdb338;
+    background: #000000;
     height: 50px;
-    width: 100%; /* Setting the width to fill the entire width of the screen */
-    position: absolute; /* Sets the location of the footer to be at the bottom of the screen, no matter what */
+    width: 100%; 
+    position: absolute; 
     bottom: 0;
-    text-align: right;
+    text-align: center;
 }
 
-#indexGrid {    /* The grid layout of the homepage */
-    display: grid;  /* Telling the browser that this is a grid */
-    grid-template-columns: 100vw;   /* Setting a width of each of the columns, in this case the whole width of the page */
-    grid-template-areas: 'header'   /* Specifying the layout of each of the grid areas */
+#indexGrid {   
+    display: grid;  
+    grid-template-columns: 100%;  
+    grid-template-areas: 'header'   
                          'nav' 
                          'main'
                          'right'
                          'footer';
 }
 
-#downGrid { /* The grid layout of the downloads page */
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-areas: 'header'
-                         'nav'
-                         'main'
-                         'games'
-                         'footer';
-}
-
-#mindGrid { /* The grid layout of the Mind charity page */
-    display: grid;
-    grid-template-areas: 'header'
-                         'nav'
-                         'mindImages'
-                         'charityMain'
-                         'footer';
-}
-
-#youngGrid {    /* The grid layout of the YoungMinds charity page */
-    display: grid;
-    grid-template-areas: 'header'
-                         'nav'
-                         'youngImages'
-                         'charityMain'
-                         'footer';
-}
-
-#contactsGrid { /* The grid layout of the contacts page */
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-areas: 'header' 
-                         'nav' 
-                         'form' 
-                         'main' 
-                         'footer';
-}
-
-body { /* Attributes of the page itself, not specifying any elements */
-    margin: 0; /* Removes the default value for the margin of the body */
-    background-image: url("pics/backgroundTileSmall.png"); /* Sets the background image of the page */
-    background-repeat: repeat; /* Causes the backgroumd image to repeat, creating a tiled effect */
+body { 
+    margin: 0;
+    background-color: #b00202; 
+    background-repeat: repeat; 
     background-size: initial;
     color: #ffffff;
     position: relative;
-    min-height: 100vh; /* Setting the height based on the height of the viewport */
+    min-height: 100vh; 
 }
 
-.HTJLogo { /* The logo in the top left of every page */
-    width: 210px;
-    height: 70px;
-    display: block; /* Ensures that no other elements will be horizontally aligned with it */
-    margin-left: auto;
-    margin-right: auto;
+h2 {
+    font-size: 15vw;
 }
 
-.topColumn { /* A column in the navbar in which a button will be */
-    float: left; /* Causes each column to move as far left as it can go before overlapping another object */
-    width: 25%;
-    height: 5vh;
-}
-
-.topRow { /* The row in the navbar in which the buttons will be */
-    clear: both;
-    display: flex; /* Causes the buttons within the navbar to fill the space that they have */
-}
-
-.topButton { /* The buttons within the navbar */
+#SelfLogo { 
+    width: 50px;
     height: 50px;
-    width: 100%;
-    background: #fdb338;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#name {
+    height: 37px;
+    top: 50%;
+}
+
+.centerWrapper {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.topButton {
+    height: 35px;
+    width: 25%;
+    background: #FFFFFF;
     color: #000000;
     margin-bottom: 10px;
     border-color: #000000;
     border-style: solid;
     border-width: thick;
+    border-radius: 12px;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.85vw;
+    transition: all .2s ease-in-out;
 }
 
-    .topButton:hover { /* The style of the navbar buttons when they are hovered over */
-        background: #000000;
-        color: #fdb338;
+    .topButton:hover { 
+        color: #b00202;
+        transform: scale(1.1);
     }
 
-.topDropBtn { /* The navbar button which creates a dropdown menu */
-    height: 50px;
-    width: 100%;
-    background: #fdb338;
-    color: #000000;
-    border-color: #000000;
-    border-style: solid;
-    border-width: thick;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.85vw;
-}
-
-.dropdown { /* The dropdown menu */
-    width: 100%;
-    position: relative; /* Setting the dropdwon menu to display in a position relative to its parent, the button */
-    display: inline-block;
-}
-
-.dropdown-content { /* The content within the dropdown menu */
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: #f1f1f1;
-    font-size: 2vw;
-}
-
-    .dropdown-content a { /* The links within the dropdown menu */
-        background: #fdb338;
-        color: black;
-        padding: 12px 0px;
-        text-decoration: none; /* Removes the default hyperlink style, blue text underlined */
-        text-align: center;
-        display: block;
-    }
-
-        .dropdown-content a:hover { /* The style of the links in the dropdown menu when they are hovered over */
-            background: #000000;
-            color: #fdb338;
-        }
-
-.dropdown:hover .dropdown-content { /* Causes the dropdown menu to appear when the button is hovered over */
-    display: block;
-}
-
-.dropdown:hover .topDropBtn { /* The style of the button when the button and dropdown menu are hovered over */
-    background: #000000;
-    color: #fdb338;
-}
-
-.copyright { /* The copyright text in the footer */
-    align-content: end; /* Causes the elements within to be aligned on the right */
+.copyright { 
+    align-content: center;
     font-family: Arial, sans-serif;
     font-size: 10px;
-    color: #000000;
+    color: #ffffff;
     margin: 10px;
+    line-height: 1.6;
 }
 
-.lblContacts { /* The label which contains contact info on the contacts page */
-    font-size: 5vw;
-    margin-left: 10px;
-}
-
-.lblEmail { /* The label which contains the contact email */
-    font-size: 3vw;
-    margin-left: 10px;
-}
-
-.socialImgBlock { /* The div containing the social media links on the contacts page */
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.socialImage { /* The social medeia link images */
-    width: 20%;
-    height: inherit;
-    padding: 10px;
-}
-
-#contactForm { /* The contact form on the contacts page */
-    grid-area: form;
-    font-family: 'Press Start 2P', cursive;
-    background-color: #025196;
-    margin-top: 5%;
-}
-
-.formDiv { /* The div containing the contact form */
-    margin-top: 40px;
-}
-
-#btnSubmit { /* The submit button under the form */
-    height: 50px;
-    width: 100%;
-    background: #fdb338;
-    color: #000000;
-    margin-bottom: 10px;
-    border-color: #000000;
-    border-style: solid;
-    border-width: thick;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 5vw;
-    margin-top: 20px;
-}
-
-    #btnSubmit:hover { /* The styles of the form's submit button when hovered over */
-        background: #000000;
-        color: #fdb338;
-    }
-
-input { /* The input boxes in the form */
-    width: 100%;
-    height: 3vh;
-    margin-top: 10px;
-}
-
-#info { /* The information paragraph on the homepage */
-    text-align: left;
-    margin: 20px;
-    font-size: 3vw;
-}
-
-.anyBG { /* For any div that needs a background */
-    background-color: #025196;
-    background-clip: content-box; /* Setting the backgrounnd to fill only the content, ignoring borders and padding */
-    padding: 10px;
-}
-
-.Ws { /* Where and when labels on homepage */
-    text-align: left;
-    margin: 20px;
-    font-size: 3vw;
-    float: none;
-    display: block;
-}
-
-.placeTime { /* Location and time labels on homepage */
-    text-align: left;
-    margin: 20px;
-    font-size: 3vw;
-    position: relative;
-    float: none;
-    display: block;
-}
-
-.downText { /* Text on downloads page */
-    font-size: 3vw;
-}
-
-.caption { /* The text within the information box on each donloadble game */
-    text-align: center;
-}
-
-#gamesGrid { /* The grid layout of the games on the downloads page */
-    grid-area: games;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 8vw;
-    justify-content: center;
-    margin-bottom: 100px;
-}
-
-.downSect { /* A section in which a donloadable game will be. 2 per line on mobile, 3 on tablet, and 4 on PC*/
-    width: 40vw;
-    height: 10vh;
-}
-
-.downPic { /* The picture displayed to represent each downloadable game (currently placeholder images) */
-    width: 40vw;
-    height: 10vh;
-    position: absolute;
-    z-index: 0;
-}
-
-.gameCaption { /* The caption and information icon for each downloadable game (currently placeholder text) */
-    height: 8vw;
-    width: 8vw;
-    background-image: url('pics/picInfo.png');
-    overflow: hidden;
-    background-size: cover;
-    font-size: 0px;
-    position: absolute;
-    z-index: 1;
-}
-
-    .gameCaption:hover { /* The style of the games' captions when hovered over. This displays the text of the caption */
-        height: inherit;
-        width: inherit;
-        background-image: none;
-        background-size: cover;
-        color: #ffffff;
-        background-color: #000000;
-        text-align: center;
-        font-size: 2vw;
-        line-height: 1.5;
-    }
-
-.youngImages { /* The promotional images used on the YoungMinds charity page */
-    position: relative;
-    display: grid;
-    grid-template-columns: 100%;
-}
-
-.charityPic { /* Each individual promotional image used on the charity pages */
-    width: 100%;
-}
-
-.mindImages { /* The promotional images used on the Mind charity page */
-    position: relative;
-    display: grid;
-    grid-template-columns: 100%;
-}
-
-.charityLogo { /* The charity logos at the bottom left of the charity promotional images */
-    height: 5vh;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-}
-
-.charityText { /* The promotional images used on the YoungMinds charity page */
-    text-align: center;
-}
-
-.charityMain { /* The text explaining what the charities are all about */
-    text-align: center;
-}
-
-.btnDonate { /* The donate button at the bottom of the charity pages that takes you to the charities' respective donation pages */
-    height: 50px;
-    width: 50%;
-    background: #fdb338;
-    color: #000000;
-    margin-bottom: 10px;
-    border-color: #000000;
-    border-style: solid;
-    border-width: thick;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 3vw;
-    margin-bottom: 7.5vh;
-}
-
-    .btnDonate:hover { /* The styles of the donate buttons */
-        background: #000000;
-        color: #fdb338;
-    }
-
-.mobileHide { /* Any element that will not be displayed on mobile */
+.mobileHide { 
     display: none;
 }
 
-.desktopHide {  /* Any element that will not be displayed on desktop */
+.desktopHide {  
     display: inherit;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) { /* Styles that will appear on tablet screens */
-
-    #btnWelcome {
-        height: 100px;
-        font-size: 3vw;
-    }
+@media only screen and (min-width: 600px) and (max-width: 768px) { 
 
     .right {
         height: 1000px;
@@ -438,108 +171,53 @@ input { /* The input boxes in the form */
     footer {
         height: 75px;
     }
-
-    #gamesGrid {
-        grid-template-columns: auto auto auto;
-        grid-gap: 2vh;
-    }
-
-    .downSect {
-        width: 30vw;
-        height: 12vh;
-    }
-
-    .downText {
-        font-size: 2.5vw;
-    }
-
-    .downPic {
-        width: 30vw;
-        height: 12vh;
-    }
-
-    .gameCaption:hover {
-        font-size: 1.5vw;
-    }
-
-    .charityText {
-        font-size: 2.75vw;
-    }
-
-   legend {
-       font-size: 3vw;
-   } 
-
-    label {
-        font-size: 3vw;
-    }
-
-    #btnSubmit {
-        font-size: 3.5vw;
-    }
-
-    .socialImgBlock {
-        margin-bottom: 75px;
-    }
-
 }
 
-@media only screen and (min-width: 769px) { /* Styles that will appear on desktop screens */
+@media only screen and (min-width: 769px) {
 
     body {
         background-image: url("pics/backgroundTile.png");
     }
 
-    #indexGrid {
-        display: grid;
-        grid-template-columns: 80vw 20vw;
-        grid-template-areas: 'header header' 
-                             'nav nav'
-                             'main right'
-                             'footer footer';
+    div {
+        font-size: 22px;
     }
 
-    #contactsGrid {
+    #indexGrid {
         display: grid;
-        grid-template-columns: 30vw 70vw;
-        grid-template-areas: 'header header'
-                             'nav nav' 
-                             'main form'
-                             'footer footer';
+        grid-template-columns: 50% 25% 25%;
+        grid-template-areas: 'header header header' 
+                             'main right right'
+                             'footer footer footer';
     }
 
     main {
         margin-top: 5px;
+    }
+    nav {
+        margin-left: auto;
+        margin-right: 20px;
     }
 
     h1 {
         font-size: 3vw;
     }
 
-    #paraWelcome {
-        font-size: 2vw;
-    }
-
-    #info {
-        font-size: 1.25vw;
+    h2 {
+        font-size: 6vw;
     }
 
     .right {
         height: 80vh;
     }
 
-    .lblContacts {
-        font-size: 2vw;
-    }
-
-    .lblEmail {
-        font-size: 1vw;
-    }
-
-    .HTJLogo {
-        width: 300px;
+    #SelfLogo {
+        width: 100px;
         height: 100px;
-        float: left;
+    }
+
+    #name {
+        height: 75px;
     }
     
     header {
@@ -547,12 +225,11 @@ input { /* The input boxes in the form */
     }
 
     .topButton {
-        font-size: 2.1vw;
+        font-size: 1.5vw;
         float: left;
-    }
-
-    .topDropBtn {
-        font-size: 2.2vw;
+        width: auto;
+        height: auto;
+        padding-block: 4px;
     }
 
     footer {
@@ -561,87 +238,6 @@ input { /* The input boxes in the form */
 
     .copyright {
         font-size: 16px;
-    }
-
-    #contactForm {
-        font-size: 1.5vw;
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-
-    .formDiv {
-        justify-content: left;
-    }
-
-    input {
-        float: right;
-        width: 45%;
-        margin-top: 0px;
-    }
-
-    #btnSubmit {
-        font-size: 1.85vw;
-    }
-
-    .Ws {
-        font-size: 1.25vw;
-        float: left;
-    }
-
-    .placeTime {
-        font-size: 1.25vw;
-        position: relative;
-        float: right;
-    }
-
-    #gamesGrid {
-        grid-template-columns: auto auto auto auto;
-        grid-gap: 4vw;
-    }
-
-    .downText {
-        font-size: 1.25vw;
-    }
-
-    .downSect {
-        width: 20vw;
-        height: 20vh;
-    }
-
-    .downPic {
-        width: 20vw;
-        height: 20vh;
-    }
-
-    .gameCaption {
-        width: 3.5vw;
-        height: 3.5vw;
-    }
-
-        .gameCaption:hover {
-            font-size: 1vw;
-        }
-
-    .youngImages {
-        grid-template-columns: 50% 50%;
-    }
-
-    .mindImages {
-        grid-template-columns: 60% 40%;
-    }
-
-    .charityText {
-        font-size: 1.5vw;
-    }
-
-    .charityLogo {
-        height: 11vh;
-    }
-
-    .btnDonate {
-        width: 30vw;
-        font-size: 2vw;
-        margin-bottom: 12vh;
     }
 
     .mobileHide {
